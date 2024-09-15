@@ -26,4 +26,4 @@ web, 프로토콜과 HTTP, 프론트엔드와 백엔드, API
 - 친구 삭제 : DELETE/friend/{friend_id}
 - 특정 친구의 할 일 조회 : GET/friend/{friend_id}/list
 
-![image](2024-09-16 01;51;46)
+![image](./2024-09-16%2001;51;46.PNG)
