@@ -18,10 +18,11 @@ public class MemberRepository {
 
     //read
     //단건조회
-    public Member findById(Long memberId){
-        return em.find(Member.class,memberId);
+    public Member findById(Long id){
+        return em.find(Member.class,id);
     }
 
+    public Member findByRealId(String memberId) {return em.find(Member.class,memberId);}
     //delete
     public void deleteById(Long memberId){
         Member member = findById(memberId);

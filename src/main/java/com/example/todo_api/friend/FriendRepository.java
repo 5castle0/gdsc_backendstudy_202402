@@ -28,6 +28,12 @@ public class FriendRepository {
     public List<Friend> findAll(){
         return em.createQuery("select t from Friend as t",Friend.class).getResultList();
     }
+    public List<Friend> findAllByMember(Member member){
+        return em.createQuery("select t from Todo as t where t.member=:friend_member",Friend.class)
+                .setParameter("friend_member",member)
+                .getResultList();
+
+    }
 
     //delete
     public void deleteById(Long friendId){

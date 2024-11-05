@@ -19,4 +19,16 @@ public class Member {
     private String memberId;
 
     private String memberPw;
+
+    public void setMemberId(String memberId) {
+        this.memberId = memberId;
+    }
+
+    public void setMemberPw(String memberPw) {
+        this.memberPw = memberPw;
+    }
+
+    public Long getId() {
+        return id;
+    }
 }

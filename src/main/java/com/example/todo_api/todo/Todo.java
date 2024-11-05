@@ -19,7 +19,7 @@ public class Todo {
     private String content;
 
     @Column(name="todo_is_checked", columnDefinition = "tinyint(1)")
-    private boolean isChecked;
+    private boolean isChecked= false; //생성시 무조건 false
 
     @JoinColumn(name="member_id") //fk임을 알림
     @ManyToOne(fetch = FetchType.LAZY)
@@ -27,9 +27,8 @@ public class Todo {
 
     //생성자를 만들기 위한 단축키 alt+insert
     //id는 자동으로 데이터베이스에서 만들기에 생성자 필요 x
-    public Todo(String content, boolean isChecked, Member member) {
+    public Todo(String content, Member member) {
         this.content = content;
-        this.isChecked = isChecked;
         this.member = member;
     }
 
